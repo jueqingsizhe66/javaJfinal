@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8154385c-6136-4f17-b843-3f53b7ffd4a6" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gitpush.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/common/model/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/hello/helloArticle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/hello/helloForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/blog/HelloControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/blog/HelloControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/hello/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hello/hello.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +73,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/hello" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDK" />
     <property name="project.structure.proportion" value="0.15" />
@@ -78,6 +82,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\codeRoom\java\jfinal-4.9.15_demo_for_maven20220423\jfinal_demo_for_maven\src\main\webapp\hello" />
       <recent name="E:\codeRoom\java\jfinal-4.9.15_demo_for_maven20220423\jfinal_demo_for_maven" />
       <recent name="E:\codeRoom\java\jfinal-4.9.15_demo_for_maven20220423\jfinal_demo_for_maven\src\main\webapp" />
     </key>
@@ -120,7 +125,7 @@
       <updated>1650728988520</updated>
       <workItem from="1650728989748" duration="4170000" />
       <workItem from="1651327468873" duration="7995000" />
-      <workItem from="1651501599511" duration="1197000" />
+      <workItem from="1651501599511" duration="3454000" />
     </task>
     <servers />
   </component>
