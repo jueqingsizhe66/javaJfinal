@@ -73,4 +73,35 @@ public class HelloControler extends Controller {
 
         //render("/hello.html") 表示在webapp目录下
     }
+
+
+    /**
+     *      注意版本问题：jfinal 4.9.18 版本支持大于 2G 的文件上传，从该 jfinal 版本开始，
+     *      cos 必须升级到 2022.2 及其未来的更高版本，否则文件上传功能无法使用。
+     *      这里要注意早于 4.9.18  的 jfinal 只能使用 cos 2020.4 以及更早其的 cos 版本。
+     *
+     *     特别注意：如果客户端请求为multipart request（form表单使用了enctype="multipart/form-data"），
+     *     那么必须先调用getFile系列方法才能使getPara系列方法正常工作，因为multipart request需要通过getFile
+     *     系列方法解析请求体中的数据，包括参数。同样的道理在Interceptor、Validator中也需要先调用getFile。
+     */
+    public void helloUpload(){
+        getFile("tx");
+        //render("/hello.html") 表示在webapp目录下
+    }
+
+    public void httpHeader(){
+        /**
+         * 获取http文件头
+         */
+        System.out.println(getRequest());
+        System.out.println("Host: \t"+getRequest().getHeader("Host"));
+        System.out.println("Cache-Control: \t"+getRequest().getHeader("Cache-Control"));
+        System.out.println("Upgrade-Insecure-Requests: \t"+getRequest().getHeader("Upgrade-Insecure-Requests"));
+        System.out.println("User-Agent: \t"+getRequest().getHeader("User-Agent"));
+        System.out.println("Accept: \t"+getRequest().getHeader("Accept"));
+        System.out.println("Accept-Encoding: \t"+getRequest().getHeader("Accept-Encoding"));
+        System.out.println("Accept-language: \t"+getRequest().getHeader("Accept-language"));
+        System.out.println("Cookie: \t"+getRequest().getHeader("Cookie"));
+        renderText(getRequest().toString());
+    }
 }

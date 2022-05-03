@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Zhaoliang Ye 叶昭良(zl_ye@qny.chng.com.cn)
  * @version V0.1
  * @Title: HelloHandler.java
- * @Description: (用一句话描述该文件做什么 ?)
+ * @Description: 编写自己的处理器
  * @Package com.demo.common.Handler
  * @Time: 2022-04-24 0:03
  */

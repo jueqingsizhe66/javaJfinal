@@ -49,7 +49,9 @@ public class DemoConfig extends JFinalConfig {
 		loadConfig();
 		
 		me.setDevMode(p.getBoolean("devMode", false));
-		
+		me.setBaseDownloadPath("downloadyzl");
+		me.setBaseUploadPath("uploadyzl");
+
 		/**
 		 * 支持 Controller、Interceptor、Validator 之中使用 @Inject 注入业务层，并且自动实现 AOP
 		 * 注入动作支持任意深度并自动处理循环注入
@@ -81,7 +83,7 @@ public class DemoConfig extends JFinalConfig {
 		DruidPlugin druidPlugin = new DruidPlugin(p.get("jdbcUrl"), p.get("user"), p.get("password"));
 		me.add(druidPlugin);
 		
-		// 配置ActiveRecord插件
+		// 配置ActiveRecord插件  Jfinal操作数据库的工具插件
 		ActiveRecordPlugin arp = new ActiveRecordPlugin(druidPlugin);
 		// 所有映射在 MappingKit 中自动化搞定
 		_MappingKit.mapping(arp);

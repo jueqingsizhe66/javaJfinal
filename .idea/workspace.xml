@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8154385c-6136-4f17-b843-3f53b7ffd4a6" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/common/model/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/hello/helloArticle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/hello/helloForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/hello/helloUpload.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/blog/HelloControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/blog/HelloControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/hello/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hello/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/common/DemoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/common/DemoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/common/Handler/HelloHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/common/Handler/HelloHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/common/Interceptor/HelloInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/common/Interceptor/HelloInterceptor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +125,8 @@
       <updated>1650728988520</updated>
       <workItem from="1650728989748" duration="4170000" />
       <workItem from="1651327468873" duration="7995000" />
-      <workItem from="1651501599511" duration="3454000" />
+      <workItem from="1651501599511" duration="6932000" />
+      <workItem from="1651589524455" duration="4931000" />
     </task>
     <servers />
   </component>
