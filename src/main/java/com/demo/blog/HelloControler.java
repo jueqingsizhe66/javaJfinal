@@ -8,6 +8,8 @@ import com.jfinal.aop.Inject;
 import com.jfinal.core.Controller;
 import com.jfinal.core.Path;
 import com.jfinal.kit.PathKit;
+import com.jfinal.plugin.activerecord.Db;
+import com.jfinal.plugin.activerecord.Record;
 import com.jfinal.render.JsonRender;
 import com.jfinal.upload.UploadFile;
 
@@ -28,6 +30,8 @@ import java.util.List;
 public class HelloControler extends Controller {
     @Inject
     UserService userService;
+    @Inject
+    ArticleService articleService;
     /**
      * 访问方式http://localhost/hello/hello12
      * 我已经会注入字段了
@@ -86,7 +90,7 @@ public class HelloControler extends Controller {
         String subtitle=getPara("subtitle");
         String content=getPara("content");
         //Article article=getBean(Article.class);
-        Article article=getBean(Article.class,"ar1"); //别名是ar1 那么对应html必须也是这样写
+        Article2 article=getBean(Article2.class,"ar1"); //别名是ar1 那么对应html必须也是这样写
         System.out.println(article);
         System.out.println("hello "+ article.title+" \t" + article.subtitle+"\t"+article.content);
         render("helloArticle.html");
@@ -247,5 +251,80 @@ public class HelloControler extends Controller {
      */
     public void downFile(){
         renderFile("myText.txt");
+    }
+
+    /**
+     * 测试Article active record
+     * 不需要加上Article类 也可以处理数据
+     * 所有对象都是Record对象
+     */
+    public void dbRecord(){
+        Record record= new Record();
+//        record.set(id,'3');
+        record.set("title","db1 for test");
+        record.set("subtitle","db1ft");
+        record.set("content","hello active record");
+
+        /**
+         * DB + record 存储数据模式
+         */
+        boolean saved = Db.save("article",record);
+        System.out.println("DB + Record  ----> saved "+ saved);
+        renderText("Done record");
+    }
+
+    /**
+     * http://localhost/hello/dbRecordDel?id=3
+     */
+    public void dbRecordDel(){
+        boolean deleted = Db.deleteById("article",getLong("id"));
+        System.out.println("DbRecorded--"+getLong("id")+" deleted --->"+deleted);
+        renderText("DBRecord deleted"+getLong("id"));
+    }
+
+    /**
+     * // 20220529235955
+     * // http://localhost/hello/dbRecordLists
+     *
+     * [
+     *   {
+     *     "subtitle": "jR1",
+     *     "id": 1,
+     *     "title": "Jfinal Record 1",
+     *     "content": "funny place"
+     *   },
+     *   {
+     *     "subtitle": "jR2",
+     *     "id": 2,
+     *     "title": "Jfinal Record 2",
+     *     "content": "funny place2"
+     *   },
+     *   {
+     *     "subtitle": "db1ft",
+     *     "id": 4,
+     *     "title": "db1 for test",
+     *     "content": "hello active record"
+     *   }
+     * ]
+     */
+    public void dbRecordLists(){
+        //List<Record> records = Db.findAll("article");
+        List<Record> records = Db.find("select * from article where id<3");
+        renderJson(records);
+    }
+
+
+    /**
+     * Article Model的方式更加人性化执行添加删除
+     */
+    public void modelArticleAdd(){
+        Article ar = new Article();
+        ar.setTitle("中文");
+        ar.setSubtitle("chinese");
+        ar.setContent("使用ArticleMode 执行Article saved");
+//        ar.save();
+        articleService.save(ar);
+        renderText("model Article Add");
+
     }
 }

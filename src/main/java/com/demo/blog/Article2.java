@@ -1,18 +1,27 @@
-package com.demo.common.model;
+package com.demo.blog;
 
 /**
  * @author Zhaoliang Ye 叶昭良(zl_ye@qny.chng.com.cn)
  * @version V0.1
- * @Title: Article.java
+ * @Title: Article2.java
  * @Description: (用一句话描述该文件做什么 ?)
- * @Package com.demo.common.model
- * @Time: 2022-05-02 23:18
+ * @Package com.demo.blog
+ * @Time: 2022-05-30 0:26
  */
-public class Article {
+public class Article2 {
+
+    public int id;
     public String title;
     public String subtitle;
     public String content;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getTitle() {
         return title;
     }

@@ -2,6 +2,7 @@ package com.demo.common.Interceptor;
 
 import com.jfinal.aop.Interceptor;
 import com.jfinal.aop.Invocation;
+import com.jfinal.plugin.activerecord.Model;
 
 /**
  * @author Zhaoliang Ye 叶昭良(zl_ye@qny.chng.com.cn)
@@ -18,4 +19,5 @@ public class uploadIntercept implements Interceptor {
         inv.getController().getRequest().setAttribute("Content-Type","multipart/form-data");
         inv.invoke();
     }
+
 }

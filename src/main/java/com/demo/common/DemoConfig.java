@@ -80,6 +80,9 @@ public class DemoConfig extends JFinalConfig {
 	 */
 	public void configPlugin(Plugins me) {
 		// 配置 druid 数据库连接池插件
+		/**
+		 * https://jfinal.com/doc/5-2
+		 */
 		DruidPlugin druidPlugin = new DruidPlugin(p.get("jdbcUrl"), p.get("user"), p.get("password"));
 		me.add(druidPlugin);
 		
@@ -107,6 +110,7 @@ public class DemoConfig extends JFinalConfig {
 	 * 配置处理器
 	 */
 	public void configHandler(Handlers me) {
-		//me.add(new HelloHandler());
+		//可以点进去add看看add的机制！
+		me.add(new HelloHandler());
 	}
 }
