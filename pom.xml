@@ -17,6 +17,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<version.feilong-platform>2.1.0</version.feilong-platform>
 	</properties>
 	
 	<!-- 使用阿里 maven 库 -->
@@ -32,6 +33,10 @@
 				<updatePolicy>always</updatePolicy>
 				<checksumPolicy>fail</checksumPolicy>
 			</snapshots>
+		</repository>
+		<repository>
+			<id>feilong-repository</id>
+			<url>https://raw.github.com/venusdrogon/feilong-platform/repository</url>
 		</repository>
 	</repositories>
 	
@@ -57,21 +62,36 @@
 		<dependency>
 			<groupId>com.jfinal</groupId>
 			<artifactId>jfinal</artifactId>
-			<version>4.9.15</version>
+<!--			<version>4.9.23</version>-->
+			<version>5.0.0</version>
 		</dependency>
 
 		<!-- jfinal-undertow 开发、部署一体化 web 服务器 -->
 		<dependency>
 			<groupId>com.jfinal</groupId>
 			<artifactId>jfinal-undertow</artifactId>
-			<version>2.5</version>
+			<version>2.9</version>
 		</dependency>
 		
 		<!-- cos 文件上传 -->
 		<dependency>
 			<groupId>com.jfinal</groupId>
 			<artifactId>cos</artifactId>
-			<version>2020.4</version>
+			<version>2022.2</version>
+<!--			<version>2019.8</version>-->
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.11.0</version>
 		</dependency>
 
 		<!-- junit 单元测试 -->
@@ -109,14 +129,25 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.44</version>
 		</dependency>
-		
+
 		<!-- druid 数据源连接池 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>1.0.29</version>
 		</dependency>
-	
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+<!--		<dependency>-->
+<!--			<groupId>javax.servlet</groupId>-->
+<!--			<artifactId>javax.servlet-api</artifactId>-->
+<!--			<version>4.0.1</version>-->
+<!--			<scope>provided</scope>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.feilong.platform</groupId>-->
+<!--			<artifactId>feilong-core</artifactId>-->
+<!--			<version>${version.feilong-platform}</version>-->
+<!--		</dependency>-->
 	</dependencies>
 	
 	<build>
