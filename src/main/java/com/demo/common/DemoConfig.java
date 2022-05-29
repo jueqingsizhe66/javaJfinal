@@ -49,7 +49,7 @@ public class DemoConfig extends JFinalConfig {
 		loadConfig();
 		
 		me.setDevMode(p.getBoolean("devMode", false));
-		me.setBaseDownloadPath("downloadyzl");
+		me.setBaseDownloadPath("download");
 		me.setBaseUploadPath("uploadyzl");
 
 		/**

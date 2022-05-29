@@ -41,8 +41,12 @@ public class HelloControler extends Controller {
         renderText("hello world34");
     }
 
+    /**
+     * http://localhost/hello/helloHtml?user=34
+     */
     public void helloHtml(){
 //        renderHtml("hello.html");
+        setAttr("user","Mr Yzl");
         render("hello.html");
         //render("/hello.html") 表示在webapp目录下
     }
@@ -220,4 +224,28 @@ public class HelloControler extends Controller {
         render(new MyRender().getRender("aaa"));
     }
 
+    /**
+     * https://jfinal.com/doc/3-3
+     * http://localhost/hello/getParameter
+     * Jfinal 3.4之后 idea不需要配置parameter, 不需要使用String test
+     * http://localhost/hello/getParameter?test=h34
+      */
+    public void getParameter(String test){
+       renderText("Get The paramter : "+test);
+    }
+
+    /**
+     * 需要google zxing javase包
+     */
+    public void getQrCode(){
+//        renderQrCode("https://jueqingsizhe66.github.io/",200,200);
+        renderQrCode("http://www.baidu.com",200,200);
+    }
+
+    /**
+     *  自动取/webapp/download/文件夹进行查找， 需要在demoConfig  configConstants函数中进行配置
+     */
+    public void downFile(){
+        renderFile("myText.txt");
+    }
 }

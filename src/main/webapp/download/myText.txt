@@ -1,0 +1,24 @@
+https://openjfx.io/javadoc/17/
+2、配置 baseDownloadPath
+    baseDownloadPath 还可以在 configConstant(Constants me) 中自由配置，例如：
+
+me.setBaseDownloadPath("files");
+    以标准的 maven  项目为例，以上配置的 baseDonwnloadPath 值将指向目录 src/main/webapp/files。
+
+    此外，还可以将 baseDownloadPath 配置为绝对路径，那么该路径将跳出项目之外，例如：
+
+
+  ublic void configConstant(Constants me) {
+  		loadConfig();
+
+  		me.setDevMode(p.getBoolean("devMode", false));
+  		me.setBaseDownloadPath("download");
+  		me.setBaseUploadPath("uploadyzl");
+
+  		/**
+  		 * 支持 Controller、Interceptor、Validator 之中使用 @Inject 注入业务层，并且自动实现 AOP
+  		 * 注入动作支持任意深度并自动处理循环注入
+  		 */
+  		me.setInjectDependency(true);  // 得开启 否则无法使用inject
+
+  		  }
